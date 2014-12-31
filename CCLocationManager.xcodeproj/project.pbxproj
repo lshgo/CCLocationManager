@@ -14,6 +14,7 @@
 		12D2DDDA1A539C5200E835CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D2DDD91A539C5200E835CC /* Images.xcassets */; };
 		12D2DDDD1A539C5200E835CC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12D2DDDB1A539C5200E835CC /* LaunchScreen.xib */; };
 		12D2DDE91A539C5200E835CC /* CCLocationManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D2DDE81A539C5200E835CC /* CCLocationManagerTests.m */; };
+		12D2DDF51A539C9F00E835CC /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D2DDF41A539C9F00E835CC /* CCLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		12D2DDE21A539C5200E835CC /* CCLocationManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCLocationManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D2DDE71A539C5200E835CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12D2DDE81A539C5200E835CC /* CCLocationManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCLocationManagerTests.m; sourceTree = "<group>"; };
+		12D2DDF31A539C9F00E835CC /* CCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocationManager.h; sourceTree = "<group>"; };
+		12D2DDF41A539C9F00E835CC /* CCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		12D2DDCB1A539C5200E835CC /* CCLocationManager */ = {
 			isa = PBXGroup;
 			children = (
+				12D2DDF21A539C9F00E835CC /* CCLocation */,
 				12D2DDD01A539C5200E835CC /* AppDelegate.h */,
 				12D2DDD11A539C5200E835CC /* AppDelegate.m */,
 				12D2DDD31A539C5200E835CC /* ViewController.h */,
@@ -117,6 +121,15 @@
 				12D2DDE71A539C5200E835CC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		12D2DDF21A539C9F00E835CC /* CCLocation */ = {
+			isa = PBXGroup;
+			children = (
+				12D2DDF31A539C9F00E835CC /* CCLocationManager.h */,
+				12D2DDF41A539C9F00E835CC /* CCLocationManager.m */,
+			);
+			path = CCLocation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D2DDF51A539C9F00E835CC /* CCLocationManager.m in Sources */,
 				12D2DDD51A539C5200E835CC /* ViewController.m in Sources */,
 				12D2DDD21A539C5200E835CC /* AppDelegate.m in Sources */,
 				12D2DDCF1A539C5200E835CC /* main.m in Sources */,
@@ -343,9 +357,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lichy Chen (NXX2BH7PS9)";
 				INFOPLIST_FILE = CCLocationManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d77e7153-bd0a-420b-b398-970b6afe0a12";
 			};
 			name = Debug;
 		};
@@ -353,9 +371,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lichy Chen (NXX2BH7PS9)";
 				INFOPLIST_FILE = CCLocationManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d77e7153-bd0a-420b-b398-970b6afe0a12";
 			};
 			name = Release;
 		};
