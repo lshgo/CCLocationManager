@@ -36,11 +36,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [UIApplication sharedApplication].idleTimerDisabled = TRUE;
-    locationmanager = [[CLLocationManager alloc] init];
-    [locationmanager requestAlwaysAuthorization];        //NSLocationAlwaysUsageDescription
-    [locationmanager requestWhenInUseAuthorization];     //NSLocationWhenInUseDescription
-    locationmanager.delegate = self;
+    if (IS_IOS8) {
+        [UIApplication sharedApplication].idleTimerDisabled = TRUE;
+        locationmanager = [[CLLocationManager alloc] init];
+        [locationmanager requestAlwaysAuthorization];        //NSLocationAlwaysUsageDescription
+        [locationmanager requestWhenInUseAuthorization];     //NSLocationWhenInUseDescription
+        locationmanager.delegate = self;
+    }
+    
 
     [self createButton];
     
